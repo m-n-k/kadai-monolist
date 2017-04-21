@@ -16,6 +16,8 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+Dotenv::Railtie.load#env読み込み時。順番が大事らしいんだ
+
 module Monolist
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
